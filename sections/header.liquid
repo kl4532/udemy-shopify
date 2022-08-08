@@ -1,1 +1,29 @@
-I AM FUCKING HEADER
+I AM CORNY HEADER
+<h1>{{ shop.name }}</h1>
+<h2>{{ section.name }}</h2>
+
+{% if shop.customer_accounts_enabled %}
+    <p>CUSTOMER ACCOUNT ENABLED</p>
+{% else %}
+    <p>CUSTOMER ACCOUNT NOT ENABLED</p>
+{% endif %}
+
+{% schema %}
+{
+    "name": "Header",
+    "settings": [
+        {
+            "type": "text",
+            "id": "mobile_menu_title",
+            "default": "Menu",
+            "label": "Mobile Menu Title"
+        },
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "main-menu",
+            "label": "Heading Navigation Menu"
+        }
+    ]
+}
+{% endschema %}
